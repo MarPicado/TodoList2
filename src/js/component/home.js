@@ -5,7 +5,7 @@ import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
 export function Home() {
-	const [task, setTask] = useState([]);
+	const [task, setTask] = useState(["hola"]);
 
 	function addItem(e) {
 		if (e.key === "Enter" && e.target.value !== "") {
@@ -39,10 +39,8 @@ export function Home() {
 									onClick={() => {
 										deleteItem(index);
 									}}>
-									{value}{" "}
-									<span className="positionIcons">
-										<i className="fas fa-trash"></i>
-									</span>
+									{value}
+									<span className="deleteOption">x</span>
 								</li>
 							);
 						})}
