@@ -27,20 +27,26 @@ export function Home() {
 			<div className="inputValue">
 				<input
 					type="text"
+					className="form-control"
+					aria-label="Sizing example input"
+					aria-describedby="inputGroup-sizing-default"
 					name="item"
 					placeholder="Add the items here"
 					onKeyPress={e => addItem(e)}></input>
 				<div className="list">
-					<ul className="lineForm">
+					<ul className="list-group">
 						{task.map((value, index) => {
 							return (
 								<li
-									className="listForm"
+									key={index}
+									className=" list-group-item d-flex justify-content-between align-items-center"
 									onClick={() => {
 										deleteItem(index);
 									}}>
 									{value}
-									<span className="deleteOption">x</span>
+									<span>
+										<i className="fas fa-trash"></i>
+									</span>
 								</li>
 							);
 						})}
