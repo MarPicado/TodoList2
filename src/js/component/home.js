@@ -53,6 +53,9 @@ export function Home() {
 					</ul>
 				</div>
 			</div>
+			<div className="counter">
+				<p>{task.length} Item left</p>
+			</div>
 		</div>
 	);
 }
